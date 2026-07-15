@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Игорь Громов</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#080B12;--accent:#4F8EF7;--accent2:#7B5FF5;--text:#F0F4FF;--sub:#8892A4;--border:rgba(255,255,255,.08);--card:rgba(255,255,255,.04)}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden}
+body::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(79,142,247,.15),transparent),radial-gradient(ellipse 60% 50% at 80% 90%,rgba(123,95,245,.1),transparent);pointer-events:none}
+.wrap{max-width:480px;width:100%;text-align:center;position:relative}
+.name{font-size:clamp(36px,8vw,52px);font-weight:700;letter-spacing:-1.5px;margin-bottom:.5rem;background:linear-gradient(135deg,var(--text) 50%,var(--sub));-webkit-background-clip:text;-webkit-text-fill-color:transparent;opacity:0;animation:fadeUp .6s .1s forwards}
+.sub{font-size:14px;color:var(--sub);margin-bottom:3rem;line-height:1.6;opacity:0;animation:fadeUp .6s .25s forwards}
+.cards{display:flex;flex-direction:column;gap:12px;opacity:0;animation:fadeUp .6s .4s forwards}
+.card{display:block;text-decoration:none;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:all .3s;text-align:left}
+.card:hover{background:rgba(79,142,247,.08);border-color:rgba(79,142,247,.35);transform:translateY(-3px);box-shadow:0 16px 48px rgba(79,142,247,.12)}
+.card-title{font-size:16px;font-weight:600;color:var(--text);margin-bottom:4px}
+.card-desc{font-size:12px;color:var(--sub);line-height:1.5}
+.card-arrow{float:right;color:var(--accent);font-size:18px;margin-top:8px}
+.contacts{margin-top:3rem;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;opacity:0;animation:fadeUp .6s .55s forwards}
+.contacts a,.contacts span{font-size:12px;color:var(--sub);text-decoration:none;transition:color .2s}
+.contacts a:hover{color:var(--accent)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="name">Игорь Громов</h1>
+  <p class="sub">Руковожу креативным производством в performance-маркетинге.<br>7+ лет в индустрии · iGaming, betting, white-label</p>
+  <div class="cards">
+    <a class="card" href="/head-of-creative">
+      <span class="card-arrow">→</span>
+      <div class="card-title">Head of Creative · Creative Operations</div>
+      <div class="card-desc">Управление отделом, KPI-системы, аналитика, масштабирование production</div>
+    </a>
+    <a class="card" href="/motion-lead">
+      <span class="card-arrow">→</span>
+      <div class="card-title">Team Lead · Motion Design</div>
+      <div class="card-desc">Производство видеокреативов: UGC, 3D, AI-пайплайн, управление командой дизайнеров</div>
+    </a>
+  </div>
+  <div class="contacts">
+    <span>+7 (903) 804-09-32</span>
+    <a href="mailto:igorgromovwork@yandex.ru">igorgromovwork@yandex.ru</a>
+    <a href="https://t.me/igoryangromov">@igoryangromov</a>
+  </div>
+</div>
+</body>
+</html>

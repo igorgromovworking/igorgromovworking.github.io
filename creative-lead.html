@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Игорь Громов - Creative Lead</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+:root{--bg:#080B12;--bg2:#0E1320;--accent:#4F8EF7;--accent2:#7B5FF5;--text:#F0F4FF;--sub:#8892A4;--border:rgba(255,255,255,.08);--card:rgba(255,255,255,.04);--green:#4ADE80;--red:#F87171}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text)}
+nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(20px);background:rgba(8,11,18,.85);border-bottom:1px solid var(--border);padding:.75rem 2rem;display:flex;align-items:center;gap:2rem}
+.nav-name{font-size:14px;font-weight:600;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;flex:1}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{font-size:12px;color:var(--sub);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.btn-p{padding:8px 18px;background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:8px;color:white;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit}
+.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;padding:4rem 2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(79,142,247,.15),transparent),radial-gradient(ellipse 60% 50% at 80% 80%,rgba(123,95,245,.1),transparent);pointer-events:none}
+.hero-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;opacity:0;animation:fadeUp .6s .2s forwards}
+.hero-name{font-size:clamp(56px,9vw,96px);font-weight:700;line-height:1;letter-spacing:-3px;margin-bottom:1rem;opacity:0;animation:fadeUp .6s .35s forwards;background:linear-gradient(135deg,var(--text) 50%,var(--sub));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-title{font-size:clamp(18px,2.5vw,24px);color:var(--sub);margin-bottom:2rem;opacity:0;animation:fadeUp .6s .5s forwards}
+.hero-title b{color:var(--accent);font-weight:500}
+.hero-desc{max-width:540px;font-size:14px;color:var(--sub);line-height:1.8;margin-bottom:2.5rem;opacity:0;animation:fadeUp .6s .65s forwards}
+.hero-cta{display:flex;gap:1rem;opacity:0;animation:fadeUp .6s .8s forwards}
+.btn-primary{padding:14px 28px;background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:10px;color:white;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(79,142,247,.35)}
+.btn-ghost{padding:14px 28px;background:transparent;border:1px solid var(--border);border-radius:10px;color:var(--sub);font-size:14px;cursor:pointer;font-family:inherit;transition:all .2s}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.stats-band{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{padding:2rem;text-align:center;position:relative}
+.stat-item+.stat-item::before{content:'';position:absolute;left:0;top:20%;height:60%;width:1px;background:var(--border)}
+.stat-num{font-size:40px;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+.stat-lbl{font-size:11px;color:var(--sub);margin-top:8px;letter-spacing:.05em}
+.section{padding:5rem 2rem;max-width:1000px;margin:0 auto}
+.section-header{display:flex;align-items:center;gap:1rem;margin-bottom:3rem}
+.section-num{font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.15em}
+.section-title{font-size:26px;font-weight:600}
+.section-line{flex:1;height:1px;background:var(--border)}
+.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.case-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem;transition:all .3s;opacity:0;transform:translateY(24px)}
+.case-card.vis{opacity:1;transform:translateY(0)}
+.case-card:hover{background:rgba(79,142,247,.07);border-color:rgba(79,142,247,.3);transform:translateY(-5px);box-shadow:0 24px 60px rgba(79,142,247,.1)}
+.case-title{font-size:15px;font-weight:600;margin-bottom:1rem}
+.case-row{display:flex;gap:.75rem;margin-bottom:.6rem;align-items:flex-start}
+.ctag{font-size:10px;padding:3px 10px;border-radius:20px;font-weight:500;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.cp{background:rgba(248,113,113,.15);color:var(--red)}
+.ca{background:rgba(79,142,247,.15);color:var(--accent)}
+.cr{background:rgba(74,222,128,.15);color:var(--green)}
+.ctext{font-size:12px;color:var(--sub);line-height:1.6}
+.timeline{position:relative;padding-left:2.5rem}
+.timeline::before{content:'';position:absolute;left:8px;top:10px;bottom:10px;width:1px;background:linear-gradient(to bottom,var(--accent),transparent)}
+.tl-item{position:relative;margin-bottom:2.25rem;opacity:0;transform:translateX(-12px)}
+.tl-item.vis{opacity:1;transform:translateX(0);transition:all .45s}
+.tl-dot{position:absolute;left:-2.5rem;top:7px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);transition:all .3s}
+.tl-item:hover .tl-dot{background:var(--accent);box-shadow:0 0 14px rgba(79,142,247,.6)}
+.tl-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.tl-co{font-size:14px;font-weight:600}
+.tl-period{font-size:11px;color:var(--sub);font-style:italic}
+.tl-role{font-size:12px;color:var(--accent);font-weight:500;margin:3px 0 5px}
+.tl-note{font-size:11px;color:var(--sub);font-style:italic;margin-bottom:6px}
+.tl-body{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-top:.6rem}
+.tl-body ul{list-style:none}
+.tl-body li{font-size:12px;color:var(--sub);padding:3px 0 3px 16px;position:relative;line-height:1.55}
+.tl-body li::before{content:'›';position:absolute;left:0;color:var(--accent);font-size:14px}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:all .3s}
+.skill-card:hover{background:rgba(79,142,247,.07);border-color:rgba(79,142,247,.3)}
+.skill-card.wide{grid-column:span 2}
+.skill-card-title{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;padding:4px 11px;border-radius:20px;background:rgba(255,255,255,.06);color:var(--sub);border:1px solid var(--border);transition:all .2s;cursor:default}
+.tag:hover{background:rgba(79,142,247,.14);color:var(--accent);border-color:rgba(79,142,247,.3)}
+.tag.blue{background:rgba(79,142,247,.12);color:var(--accent);border-color:rgba(79,142,247,.25)}
+footer{border-top:1px solid var(--border);padding:2.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-name{font-size:14px;font-weight:600;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.footer-contacts{display:flex;gap:2rem;flex-wrap:wrap}
+.footer-contacts span{font-size:12px;color:var(--sub)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@media (max-width:720px){
+  nav{padding:.6rem 1rem;gap:.75rem;flex-wrap:wrap}
+  .nav-links{gap:1rem;order:3;width:100%;justify-content:flex-start}
+  .hero{min-height:auto;padding:3rem 1.25rem 2.5rem}
+  .hero-name{font-size:clamp(42px,13vw,64px);letter-spacing:-1.5px}
+  .hero-title{font-size:16px}
+  .hero-desc{font-size:13px}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .btn-primary,.btn-ghost{text-align:center}
+  .stats-band{grid-template-columns:1fr 1fr}
+  .stat-item{padding:1.25rem .75rem}
+  .stat-item+.stat-item::before{display:none}
+  .stat-item{border-bottom:1px solid var(--border)}
+  .stat-num{font-size:30px}
+  .section{padding:2.5rem 1.25rem}
+  .section-title{font-size:20px}
+  .cases-grid{grid-template-columns:1fr!important}
+  .skills-grid{grid-template-columns:1fr}
+  .skill-card.wide{grid-column:auto}
+  .timeline{padding-left:1.75rem}
+  .tl-dot{left:-1.75rem}
+  .tl-head{flex-direction:column;gap:.15rem}
+  footer{flex-direction:column;align-items:flex-start;gap:.75rem;padding:2rem 1.25rem}
+  .footer-contacts{flex-direction:column;gap:.4rem}
+}
+@media print{
+  *{animation:none!important;transition:none!important}
+  body{background:white!important;color:#1A1A1A!important}
+  nav{display:none!important}
+  .hero{min-height:auto!important;padding:1.5rem 0 1rem!important}
+  .hero::before{display:none!important}
+  .hero-label{color:#1A56DB!important;opacity:1!important;animation:none!important;margin-bottom:.5rem!important}
+  .hero-name{font-size:40px!important;letter-spacing:-1px!important;opacity:1!important;animation:none!important;background:none!important;-webkit-text-fill-color:#1A1A1A!important;color:#1A1A1A!important;margin-bottom:.5rem!important}
+  .hero-title{opacity:1!important;animation:none!important;color:#555!important;font-size:16px!important;margin-bottom:1rem!important}
+  .hero-title b{color:#1A56DB!important}
+  .hero-desc{opacity:1!important;animation:none!important;color:#333!important;margin-bottom:0!important}
+  .hero-cta{display:none!important}
+  .stats-band{background:white!important;border-color:#ddd!important}
+  .stat-item{padding:1rem!important}
+  .stat-num{background:none!important;-webkit-text-fill-color:#1A56DB!important;color:#1A56DB!important;font-size:28px!important}
+  .stat-lbl{color:#555!important}
+  .section{padding:1.5rem 0!important;max-width:100%!important}
+  .section-title{color:#1A1A1A!important;font-size:20px!important}
+  .section-num{color:#1A56DB!important}
+  .section-line{background:#ddd!important}
+  .case-card{opacity:1!important;transform:none!important;background:#F7F9FC!important;border-color:#ddd!important;box-shadow:none!important;page-break-inside:avoid;padding:1rem!important}
+  .case-title{color:#1A1A1A!important}
+  .ctext{color:#444!important}
+  .cp{background:#FAECE7!important;color:#993C1D!important;border-color:#FAECE7!important}
+  .ca{background:#E6F1FB!important;color:#0C447C!important;border-color:#E6F1FB!important}
+  .cr{background:#EAF3DE!important;color:#3B6D11!important;border-color:#EAF3DE!important}
+  .tl-item{opacity:1!important;transform:none!important;page-break-inside:avoid}
+  .tl-dot{background:white!important;border-color:#1A56DB!important}
+  .timeline::before{background:#1A56DB!important}
+  .tl-co{color:#1A1A1A!important}
+  .tl-period,.tl-note{color:#777!important}
+  .tl-role{color:#1A56DB!important}
+  .tl-body{background:#F7F9FC!important;border-color:#ddd!important}
+  .tl-body li{color:#444!important}
+  .tl-body li::before{color:#1A56DB!important}
+  .skill-card{background:#F7F9FC!important;border-color:#ddd!important;page-break-inside:avoid}
+  .skill-card-title{color:#1A56DB!important}
+  .tag{background:white!important;color:#444!important;border-color:#ccc!important}
+  .tag.blue{background:#E6F1FB!important;color:#0C447C!important;border-color:#B5D4F4!important}
+  footer{border-color:#ddd!important;padding:1.5rem 0!important}
+  .footer-name{background:none!important;-webkit-text-fill-color:#1A56DB!important;color:#1A56DB!important}
+  .footer-contacts span{color:#555!important}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Игорь Громов</div>
+  <div class="nav-links">
+    <a href="#cases">Кейсы</a>
+    <a href="#exp">Опыт</a>
+    <a href="#skills">Навыки</a>
+  </div>
+  <button class="btn-p" onclick="window.print()">Скачать PDF</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-label">Creative Lead · Performance Marketing</div>
+  <h1 class="hero-name">Игорь<br>Громов</h1>
+  <div class="hero-title">Отвечаю за уровень креатива. <b>Стиль, качество, результат.</b></div>
+  <p class="hero-desc">7+ лет в motion design и performance-маркетинге, 3+ года управления командой в iGaming, betting, white-label вертикалях. Вырос с моушен-дизайнера до тим-лида за 7 месяцев. Команда — 10 человек (в пике 12): моушен, статик, playable. Выстраиваю производство UGC, ads и promo-креативов: процессы, шаблоны, AI-пайплайн — без микроменеджмента.</p>
+  <div class="hero-cta">
+    <button class="btn-primary" onclick="document.getElementById('cases').scrollIntoView({behavior:'smooth'})">Смотреть кейсы</button>
+    <button class="btn-ghost" onclick="document.getElementById('exp').scrollIntoView({behavior:'smooth'})">Опыт работы</button>
+  </div>
+</section>
+
+<div class="stats-band">
+  <div class="stat-item"><div class="stat-num" data-t="7" data-s="+">0</div><div class="stat-lbl">лет в индустрии</div></div>
+  <div class="stat-item"><div class="stat-num" data-t="12">0</div><div class="stat-lbl">человек в команде</div></div>
+  <div class="stat-item"><div class="stat-num" data-t="500">0</div><div class="stat-lbl">крео в месяц</div></div>
+  <div class="stat-item"><div class="stat-num" data-t="80" data-s="%+">0</div><div class="stat-lbl">ROI кампаний</div></div>
+</div>
+
+<section class="section" id="cases">
+  <div class="section-header"><span class="section-num">01</span><h2 class="section-title">Ключевые кейсы</h2><div class="section-line"></div></div>
+  <div class="cases-grid">
+    <div class="case-card"><div class="case-title">Система качества крео</div>
+      <div class="case-row"><span class="ctag cp">Проблема</span><span class="ctext">Качество зависело от конкретного дизайнера, единого стандарта не было</span></div>
+      <div class="case-row"><span class="ctag ca">Действие</span><span class="ctext">Внедрил стандарты по визуалу, динамике и аудио; оптимизировал пайплайн: шаблоны, автоматизация, 30+ AI-сервисов</span></div>
+      <div class="case-row"><span class="ctag cr">Результат</span><span class="ctext">ROI 80%+ стабильно на горизонте года при 300–500 крео/мес</span></div>
+    </div>
+    <div class="case-card"><div class="case-title">KPI-система и бонусная программа</div>
+      <div class="case-row"><span class="ctag cp">Проблема</span><span class="ctext">Не было прозрачной оценки, мотивация держалась на личных отношениях</span></div>
+      <div class="case-row"><span class="ctag ca">Действие</span><span class="ctext">Разработал KPI с измеримыми метриками и бонусную программу совместно с креативным отделом</span></div>
+      <div class="case-row"><span class="ctag cr">Результат</span><span class="ctext">Оценка стала прозрачной, ушёл субъективизм в решениях по росту и оплате</span></div>
+    </div>
+    <div class="case-card"><div class="case-title">Аналитика в связке с таск-трекером</div>
+      <div class="case-row"><span class="ctag cp">Проблема</span><span class="ctext">Данные по задачам и метрикам жили отдельно, общей картины не было</span></div>
+      <div class="case-row"><span class="ctag ca">Действие</span><span class="ctext">С аналитиками и разработчиками создал систему сбора данных в связке с Asana и Power BI</span></div>
+      <div class="case-row"><span class="ctag cr">Результат</span><span class="ctext">Решения по отделу стали опираться на цифры, а не на ощущения</span></div>
+    </div>
+    <div class="case-card"><div class="case-title">Рост отдела: с 4 до 21 человека</div>
+      <div class="case-row"><span class="ctag cp">Проблема</span><span class="ctext">Растущий объём клиентов требовал масштабирования без потери качества</span></div>
+      <div class="case-row"><span class="ctag ca">Действие</span><span class="ctext">Лично нанял 7–8 дизайнеров, выстроил онбординг, фидбэк и грейдирование</span></div>
+      <div class="case-row"><span class="ctag cr">Результат</span><span class="ctext">Отдел вырос с 4 до 21 человека, под моим руководством — до 12 человек, джуны выведены до мидл-уровня</span></div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="exp">
+  <div class="section-header"><span class="section-num">02</span><h2 class="section-title">Опыт работы</h2><div class="section-line"></div></div>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="tl-head"><span class="tl-co">Performance Marketing Agency (NDA)</span><span class="tl-period">апр 2023 — н.в.</span></div>
+      <div class="tl-role">Team Lead, Creative Department</div>
+      <div class="tl-note">Пришёл на старте компании (20 чел.) моушен-дизайнером, через 7 месяцев стал тим-лидом. Компания выросла до 100+ человек, дизайн-отдел — до 21.</div>
+      <div class="tl-body"><ul>
+        <li>Контроль качества и развитие визуального стиля: стандарты по визуалу, динамике и аудио</li>
+        <li>Управление командой 10–12 человек: моушен, статик, playable дизайнеры</li>
+        <li>Выпуск 300–500 крео/мес: UGC, ads, promo, анимации — iGaming, betting, white-label</li>
+        <li>KPI-система, бонусная программа, аналитическая инфраструктура</li>
+        <li>Кроссфункциональное взаимодействие и сотрудничество с подрядчиками: аналитики, разработчики, баинг, креативные продюсеры, аутсорс команды, зарубежные UGC-креаторы</li>
+        <li>Поднял уровень креативов до production: UGC, 3D, AI-видео</li>
+        <li>Внедрил 30+ AI-сервисов (Kling, Seedance 2.0, Higgsfield и др.)</li>
+        <li>Наставничество и развитие дизайнеров: найм, онбординг, фидбэк, грейдирование — джуны выросли до мидлов</li>
+      </ul></div>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="tl-head"><span class="tl-co">Performance Marketing Agency (NDA)</span><span class="tl-period">апр — окт 2023</span></div>
+      <div class="tl-role">Motion Designer</div>
+      <div class="tl-body"><ul>
+        <li>Рекламные видеокреативы для performance-вертикалей</li>
+        <li>Один из первых освоил AI-видеоинструменты в команде</li>
+        <li>Неформальное менторство коллег</li>
+      </ul></div>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="tl-head"><span class="tl-co">Корпорация Гуру</span><span class="tl-period">апр 2021 — мар 2023</span></div>
+      <div class="tl-role">Motion Designer</div>
+      <div class="tl-body"><ul>
+        <li>Видеокреативы для рекламы мобильных игр и приложений</li>
+        <li>Параллельная работа с несколькими брендами</li>
+      </ul></div>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="tl-head"><span class="tl-co">WakeApp</span><span class="tl-period">сен 2019 — дек 2021</span></div>
+      <div class="tl-role">Motion Designer</div>
+      <div class="tl-body"><ul>
+        <li>Креативы для арбитража мобильного трафика</li>
+        <li>Разработка сценариев и концепций</li>
+      </ul></div>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="tl-head"><span class="tl-co">AdSide Media</span><span class="tl-period">дек 2021 — фев 2022</span></div>
+      <div class="tl-role">Creative Producer / Motion Designer</div>
+      <div class="tl-body"><ul>
+        <li>Анализ рынка мобильной рекламы, генерация идей</li>
+        <li>Сопровождение производства от ТЗ до приёмки</li>
+      </ul></div>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="tl-head"><span class="tl-co">UPG Consulting</span><span class="tl-period">июн 2018 — сен 2019</span></div>
+      <div class="tl-role">Дизайнер-верстальщик</div>
+      <div class="tl-body"><ul><li>Key visual, вёрстка макетов, допечатная подготовка</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="section-header"><span class="section-num">03</span><h2 class="section-title">Навыки</h2><div class="section-line"></div></div>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="skill-card-title">Управление</div><div class="tags"><span class="tag">Найм</span><span class="tag">Онбординг</span><span class="tag">KPI</span><span class="tag">Грейдирование</span><span class="tag">Бонус. программы</span></div></div>
+    <div class="skill-card"><div class="skill-card-title">Production</div><div class="tags"><span class="tag">Контроль качества</span><span class="tag">Asana</span><span class="tag">Miro</span><span class="tag">Подрядчики</span></div></div>
+    <div class="skill-card"><div class="skill-card-title">Аналитика</div><div class="tags"><span class="tag">Power BI</span><span class="tag">Google Sheets</span></div></div>
+    <div class="skill-card"><div class="skill-card-title">Дизайн</div><div class="tags"><span class="tag">After Effects</span><span class="tag">Premiere</span><span class="tag">Photoshop</span><span class="tag">Figma</span></div></div>
+    <div class="skill-card wide"><div class="skill-card-title">AI / Тренды — 30+ сервисов</div><div class="tags"><span class="tag blue">Claude</span><span class="tag blue">ChatGPT</span><span class="tag blue">Kling</span><span class="tag blue">Seedance 2.0</span><span class="tag blue">Higgsfield</span><span class="tag blue">и другие</span></div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Игорь Громов</div>
+  <div class="footer-contacts">
+    <span>+7 (903) 804-09-32</span>
+    <span>igorgromovwork@yandex.ru</span>
+    <span>@igoryangromov</span>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(!e.isIntersecting) return;
+    const el = e.target;
+    if(el.dataset.t){
+      const t = parseInt(el.dataset.t), s = el.dataset.s||'', d = 1200, st = performance.now();
+      const upd = now => { const p = Math.min((now-st)/d,1), ease = 1-Math.pow(1-p,3); el.textContent = Math.round(ease*t)+s; if(p<1) requestAnimationFrame(upd); };
+      requestAnimationFrame(upd);
+    }
+    el.classList.add('vis');
+    io.unobserve(el);
+  });
+},{threshold:0.15});
+
+document.querySelectorAll('[data-t]').forEach(el=>io.observe(el));
+document.querySelectorAll('.case-card,.tl-item').forEach((el,i)=>{el.style.transitionDelay=i*60+'ms';io.observe(el);});
+</script>
+</body>
+</html>

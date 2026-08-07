@@ -11,6 +11,8 @@
 body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden}
 body::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(79,142,247,.15),transparent),radial-gradient(ellipse 60% 50% at 80% 90%,rgba(123,95,245,.1),transparent);pointer-events:none}
 .wrap{max-width:480px;width:100%;text-align:center;position:relative}
+.lang-switch{position:fixed;top:1.25rem;right:1.25rem;z-index:2;display:inline-flex;align-items:center;justify-content:center;min-width:42px;padding:9px 11px;border:1px solid var(--border);border-radius:9px;color:var(--sub);font-size:12px;font-weight:600;text-decoration:none;background:rgba(8,11,18,.72);backdrop-filter:blur(14px);transition:all .2s}
+.lang-switch:hover{color:var(--accent);border-color:rgba(79,142,247,.45);background:rgba(79,142,247,.08)}
 .name{font-size:clamp(36px,8vw,52px);font-weight:700;letter-spacing:-1.5px;margin-bottom:.5rem;background:linear-gradient(135deg,var(--text) 50%,var(--sub));-webkit-background-clip:text;-webkit-text-fill-color:transparent;opacity:0;animation:fadeUp .6s .1s forwards}
 .sub{font-size:14px;color:var(--sub);margin-bottom:3rem;line-height:1.6;opacity:0;animation:fadeUp .6s .25s forwards}
 .cards{display:flex;flex-direction:column;gap:12px;opacity:0;animation:fadeUp .6s .4s forwards}
@@ -26,6 +28,7 @@ body::before{content:'';position:absolute;inset:0;background:radial-gradient(ell
 </style>
 </head>
 <body>
+<a class="lang-switch" href="/en/" lang="en" aria-label="Open English version">EN</a>
 <div class="wrap">
   <h1 class="name">Игорь Громов</h1>
   <p class="sub">Руковожу креативным производством в performance-маркетинге.<br>7+ лет в индустрии · iGaming, betting, white-label</p>
@@ -41,10 +44,10 @@ body::before{content:'';position:absolute;inset:0;background:radial-gradient(ell
       <div class="card-desc">Производство видеокреативов: UGC, 3D, AI-пайплайн, управление командой дизайнеров</div>
     </a>
     <a class="card" href="/creative-lead">
-  <span class="card-arrow">→</span>
-  <div class="card-title">Creative Lead</div>
-  <div class="card-desc">Планка качества и визуальный стиль: стандарты крео, production-уровень, AI-пайплайн</div>
-</a>
+      <span class="card-arrow">→</span>
+      <div class="card-title">Creative Lead</div>
+      <div class="card-desc">Планка качества и визуальный стиль: стандарты крео, production-уровень, AI-пайплайн</div>
+    </a>
   </div>
   <div class="contacts">
     <span>+7 (903) 804-09-32</span>

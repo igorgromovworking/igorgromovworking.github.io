@@ -27,6 +27,7 @@ nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(20px);background:rgba
 .cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.case-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem;transition:all .3s;opacity:0;transform:translateY(24px)}.case-card.vis{opacity:1;transform:translateY(0)}.case-card:hover{background:rgba(79,142,247,.07);border-color:rgba(79,142,247,.3);transform:translateY(-5px);box-shadow:0 24px 60px rgba(79,142,247,.1)}.case-title{font-size:15px;font-weight:600;margin-bottom:1rem}.case-row{display:flex;gap:.75rem;margin-bottom:.6rem;align-items:flex-start}.ctag{font-size:10px;padding:3px 10px;border-radius:20px;font-weight:500;white-space:nowrap;flex-shrink:0;margin-top:2px}.cp{background:rgba(248,113,113,.15);color:var(--red)}.ca{background:rgba(79,142,247,.15);color:var(--accent)}.cr{background:rgba(74,222,128,.15);color:var(--green)}.ctext{font-size:12px;color:var(--sub);line-height:1.6}
 .timeline{position:relative;padding-left:2.5rem}.timeline::before{content:'';position:absolute;left:8px;top:10px;bottom:10px;width:1px;background:linear-gradient(to bottom,var(--accent),transparent)}.tl-item{position:relative;margin-bottom:2.25rem;opacity:0;transform:translateX(-12px)}.tl-item.vis{opacity:1;transform:translateX(0);transition:all .45s}.tl-dot{position:absolute;left:-2.5rem;top:7px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);transition:all .3s}.tl-item:hover .tl-dot{background:var(--accent);box-shadow:0 0 14px rgba(79,142,247,.6)}.tl-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap}.tl-co{font-size:14px;font-weight:600}.tl-period{font-size:11px;color:var(--sub);font-style:italic}.tl-role{font-size:12px;color:var(--accent);font-weight:500;margin:3px 0 5px}.tl-note{font-size:11px;color:var(--sub);font-style:italic;margin-bottom:6px}.tl-body{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-top:.6rem}.tl-body ul{list-style:none}.tl-body li{font-size:12px;color:var(--sub);padding:3px 0 3px 16px;position:relative;line-height:1.55}.tl-body li::before{content:'›';position:absolute;left:0;color:var(--accent);font-size:14px}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.skill-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:all .3s}.skill-card:hover{background:rgba(79,142,247,.07);border-color:rgba(79,142,247,.3)}.skill-card.wide{grid-column:span 2}.skill-card-title{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:11px;padding:4px 11px;border-radius:20px;background:rgba(255,255,255,.06);color:var(--sub);border:1px solid var(--border);transition:all .2s;cursor:default}.tag:hover{background:rgba(79,142,247,.14);color:var(--accent);border-color:rgba(79,142,247,.3)}.tag.blue{background:rgba(79,142,247,.12);color:var(--accent);border-color:rgba(79,142,247,.25)}
+.personal-note{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.35rem 1.5rem;font-size:13px;color:var(--sub);line-height:1.75}.personal-note strong{color:var(--text);font-weight:500}
 footer{border-top:1px solid var(--border);padding:2.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}.footer-name{font-size:14px;font-weight:600;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.footer-contacts{display:flex;gap:2rem;flex-wrap:wrap}.footer-contacts a,.footer-contacts span{font-size:12px;color:var(--sub);text-decoration:none}.footer-contacts a:hover{color:var(--accent)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @media (max-width:720px){nav{padding:.6rem 1rem;gap:.75rem;flex-wrap:wrap}.nav-links{gap:1rem;order:3;width:100%;justify-content:flex-start}.nav-actions{margin-left:auto}.hero{min-height:auto;padding:3rem 1.25rem 2.5rem}.hero-name{font-size:clamp(42px,13vw,64px);letter-spacing:-1.5px}.hero-title{font-size:16px}.hero-desc{font-size:13px}.hero-cta{flex-direction:column;align-items:stretch}.btn-primary,.btn-ghost{text-align:center}.stats-band{grid-template-columns:1fr 1fr}.stat-item{padding:1.25rem .75rem;border-bottom:1px solid var(--border)}.stat-item+.stat-item::before{display:none}.stat-num{font-size:30px}.section{padding:2.5rem 1.25rem}.section-title{font-size:20px}.cases-grid{grid-template-columns:1fr!important}.skills-grid{grid-template-columns:1fr}.skill-card.wide{grid-column:auto}.timeline{padding-left:1.75rem}.tl-dot{left:-1.75rem}.tl-head{flex-direction:column;gap:.15rem}footer{flex-direction:column;align-items:flex-start;gap:.75rem;padding:2rem 1.25rem}.footer-contacts{flex-direction:column;gap:.4rem}}
@@ -58,7 +59,7 @@ I grew from a Motion Designer, so I speak the same language as the team and iden
   <div class="stat-item"><div class="stat-num" data-t="7" data-s="+">7+</div><div class="stat-lbl">years in the industry</div></div>
   <div class="stat-item"><div class="stat-num" data-t="12">12</div><div class="stat-lbl">people on the team</div></div>
   <div class="stat-item"><div class="stat-num" data-t="500">500</div><div class="stat-lbl">creatives per month</div></div>
-  <div class="stat-item"><div class="stat-num">6→21</div><div class="stat-lbl">design department growth</div></div>
+  <div class="stat-item"><div class="stat-num" data-t="80" data-s="%+">80%+</div><div class="stat-lbl">campaign ROI</div></div>
 </div>
 <section class="section" id="cases">
   <div class="section-header"><span class="section-num">01</span><h2 class="section-title">Selected Case Studies</h2><div class="section-line"></div></div>
@@ -66,17 +67,17 @@ I grew from a Motion Designer, so I speak the same language as the team and iden
     <div class="case-card"><div class="case-title">Creative Quality System</div>
       <div class="case-row"><span class="ctag cp">Challenge</span><span class="ctext">Quality depended on the individual designer, and there was no shared standard.</span></div>
       <div class="case-row"><span class="ctag ca">Action</span><span class="ctext">Introduced standards for visuals, motion, and audio; optimized the pipeline with templates, automation, and 30+ AI tools.</span></div>
-      <div class="case-row"><span class="ctag cr">Result</span><span class="ctext">The team moved to shared quality standards while producing 300-500 creatives per month.</span></div>
+      <div class="case-row"><span class="ctag cr">Result</span><span class="ctext">ROI remained above 80% for 12 months while the team produced 300-500 creatives per month.</span></div>
     </div>
     <div class="case-card"><div class="case-title">KPI System and Bonus Program</div>
       <div class="case-row"><span class="ctag cp">Challenge</span><span class="ctext">There was no transparent assessment system, and motivation depended on personal relationships.</span></div>
-      <div class="case-row"><span class="ctag ca">Action</span><span class="ctext">Developed a KPI and bonus system together with the creative department; ad performance metrics were included in bonus calculations.</span></div>
+      <div class="case-row"><span class="ctag ca">Action</span><span class="ctext">Developed measurable KPIs and a bonus program together with the creative department.</span></div>
       <div class="case-row"><span class="ctag cr">Result</span><span class="ctext">Performance assessment became transparent, and growth and compensation decisions became less subjective.</span></div>
     </div>
-    <div class="case-card"><div class="case-title">Interactive Design Team Performance Dashboard</div>
-      <div class="case-row"><span class="ctag cp">Challenge</span><span class="ctext">There was no single view of designer performance.</span></div>
-      <div class="case-row"><span class="ctag ca">Action</span><span class="ctext">Worked with analysts and developers to set up data collection from Asana into Power BI for the design team.</span></div>
-      <div class="case-row"><span class="ctag cr">Result</span><span class="ctext">The result was transparent reporting on designer performance, used for team evaluation and management decisions.</span></div>
+    <div class="case-card"><div class="case-title">Analytics Connected to Task Tracking</div>
+      <div class="case-row"><span class="ctag cp">Challenge</span><span class="ctext">Task data and metrics were stored separately, so there was no complete view.</span></div>
+      <div class="case-row"><span class="ctag ca">Action</span><span class="ctext">Worked with analysts and developers to build a data collection system connecting Asana and Power BI.</span></div>
+      <div class="case-row"><span class="ctag cr">Result</span><span class="ctext">Department decisions became based on data rather than intuition.</span></div>
     </div>
     <div class="case-card"><div class="case-title">Department Growth: From 6 to 21 People</div>
       <div class="case-row"><span class="ctag cp">Challenge</span><span class="ctext">Growing client demand required scaling without losing quality.</span></div>
@@ -96,7 +97,7 @@ I grew from a Motion Designer, so I speak the same language as the team and iden
         <li>Controlled quality and developed the visual style, with standards for visuals, motion, and audio.</li>
         <li>Managed a team of 10-12 motion, static, and playable designers.</li>
         <li>Produced 300-500 creatives per month across UGC, ads, promo, and animation for iGaming, betting, and white-label projects.</li>
-        <li>Built the KPI system, bonus program, and design-team reporting in Asana and Power BI.</li>
+        <li>Built the KPI system, bonus program, and analytics infrastructure.</li>
         <li>Worked cross-functionally with analysts, developers, media buying, creative producers, outsourced teams, contractors, and international UGC creators.</li>
         <li>Raised creative quality to production level across UGC, 3D, and AI video.</li>
         <li>Introduced 30+ AI tools, including Kling, Seedance 2.0, Higgsfield, and others.</li>
@@ -154,6 +155,10 @@ I grew from a Motion Designer, so I speak the same language as the team and iden
     <div class="skill-card"><div class="skill-card-title">Design</div><div class="tags"><span class="tag">After Effects</span><span class="tag">Premiere</span><span class="tag">Photoshop</span><span class="tag">Figma</span></div></div>
     <div class="skill-card wide"><div class="skill-card-title">AI / Trends - 30+ tools</div><div class="tags"><span class="tag blue">Claude</span><span class="tag blue">ChatGPT</span><span class="tag blue">Kling</span><span class="tag blue">Seedance 2.0</span><span class="tag blue">Higgsfield</span><span class="tag blue">and others</span></div></div>
   </div>
+</section>
+<section class="section" id="personal">
+  <div class="section-header"><span class="section-num">04</span><h2 class="section-title">A Bit More About Me</h2><div class="section-line"></div></div>
+  <div class="personal-note"><strong>Outside work, I run another long-term project: a Golf GTI.</strong> Project management includes budgeting, contractor sourcing and coordination, procurement, quality control, risk management, and continuous optimization.</div>
 </section>
 <footer>
   <div class="footer-name">Igor Gromov</div>

@@ -1,77 +1,221 @@
-<!doctype html><html lang='ru'><head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Игорь Громов — Head of Creative · Creative Operations Lead</title><style>
-:root{
-  --bg:#0b0d12;--card:#121621;--muted:#9aa4b2;--text:#f4f7fb;
-  --line:#232938;--accent:#8aa4ff;--accent2:#7de2c3;
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Игорь Громов — Head of Creative</title>
+<meta name="description" content="7+ лет в performance-маркетинге, 3+ года в руководстве креативным отделом. Система производства, KPI, аналитика, автоматизация, ИИ. Команда 10–12 дизайнеров, 300–500 креативов в месяц.">
+<link rel="canonical" href="https://igorgromovworking.github.io/head-of-creative">
+<link rel="alternate" hreflang="ru" href="https://igorgromovworking.github.io/head-of-creative">
+<link rel="alternate" hreflang="en" href="https://igorgromovworking.github.io/en/head-of-creative">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+:root{--bg:#080B12;--bg2:#0E1320;--accent:#4F8EF7;--accent2:#7B5FF5;--text:#F0F4FF;--sub:#8892A4;--border:rgba(255,255,255,.08);--card:rgba(255,255,255,.04);--green:#4ADE80;--red:#F87171}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text)}
+nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(20px);background:rgba(8,11,18,.88);border-bottom:1px solid var(--border);padding:.72rem 2rem;display:flex;align-items:center;gap:1.5rem}
+.nav-name{font-size:14px;font-weight:600;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;flex:1}
+.nav-links{display:flex;gap:1.35rem}.nav-links a{font-size:12px;color:var(--sub);text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--text)}
+.nav-actions{display:flex;align-items:center;gap:.55rem}.lang-seg{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden}.lang-seg a{padding:7px 9px;color:var(--sub);font-size:10px;font-weight:600;text-decoration:none}.lang-seg a.active{background:rgba(79,142,247,.14);color:var(--accent)}.lang-seg a+a{border-left:1px solid var(--border)}
+.btn-nav{padding:8px 13px;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--sub);font-size:11px;font-weight:500;cursor:pointer;font-family:inherit;text-decoration:none;transition:.2s}.btn-nav:hover{color:var(--accent);border-color:rgba(79,142,247,.4);background:rgba(79,142,247,.06)}
+.btn-p{padding:8px 16px;background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:8px;color:white;font-size:11px;font-weight:500;cursor:pointer;font-family:inherit}
+
+.hero{min-height:76vh;display:flex;flex-direction:column;justify-content:center;padding:3.2rem 2rem 2.6rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 76% 58% at 50% -12%,rgba(79,142,247,.16),transparent),radial-gradient(ellipse 58% 46% at 82% 82%,rgba(123,95,245,.09),transparent);pointer-events:none}
+.hero-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.15rem;opacity:0;animation:fadeUp .6s .15s forwards}
+.hero-name{font-size:clamp(54px,8vw,88px);font-weight:700;line-height:.98;letter-spacing:-3px;margin-bottom:.8rem;opacity:0;animation:fadeUp .6s .3s forwards;background:linear-gradient(135deg,var(--text) 50%,var(--sub));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-title{font-size:clamp(18px,2.35vw,23px);color:var(--sub);margin-bottom:1.4rem;opacity:0;animation:fadeUp .6s .45s forwards;max-width:860px}.hero-title b{color:var(--accent);font-weight:500}
+.hero-desc{max-width:790px;font-size:14px;color:var(--sub);line-height:1.78;margin-bottom:2rem;opacity:0;animation:fadeUp .6s .6s forwards}
+.metric{color:var(--text);font-weight:650}.hero-desc .metric{color:#DDE8FF}
+.hero-cta{display:flex;gap:.8rem;opacity:0;animation:fadeUp .6s .75s forwards}
+.btn-primary{padding:12px 23px;background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:9px;color:white;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(79,142,247,.3)}
+.btn-ghost{padding:12px 23px;background:transparent;border:1px solid var(--border);border-radius:9px;color:var(--sub);font-size:13px;cursor:pointer;font-family:inherit;transition:all .2s}.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+.stats-band{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{padding:1.65rem;text-align:center;position:relative}.stat-item+.stat-item::before{content:'';position:absolute;left:0;top:20%;height:60%;width:1px;background:var(--border)}
+.stat-num{font-size:38px;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}.stat-lbl{font-size:10.5px;color:var(--sub);margin-top:8px;letter-spacing:.05em}
+
+.section{padding:4.6rem 2rem;max-width:1040px;margin:0 auto}.section-header{display:flex;align-items:center;gap:1rem;margin-bottom:2.4rem}.section-num{font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.15em}.section-title{font-size:25px;font-weight:600}.section-line{flex:1;height:1px;background:var(--border)}
+
+.cases-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.case-card{grid-column:span 3;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.55rem;transition:all .3s;opacity:0;transform:translateY(20px);min-width:0}
+.case-card.featured{grid-column:1/-1;padding:2rem;background:linear-gradient(135deg,rgba(79,142,247,.09),rgba(123,95,245,.045));border-color:rgba(79,142,247,.23)}
+.cases-grid.count-4 .case-card:not(.featured){grid-column:span 2}
+.case-card.vis{opacity:1;transform:translateY(0)}
+.case-card:hover{background:rgba(79,142,247,.07);border-color:rgba(79,142,247,.3);transform:translateY(-4px);box-shadow:0 20px 50px rgba(79,142,247,.08)}
+.case-card.featured:hover{background:linear-gradient(135deg,rgba(79,142,247,.12),rgba(123,95,245,.065))}
+.case-title{font-size:15px;font-weight:600;margin-bottom:1rem}.case-card.featured .case-title{font-size:18px;margin-bottom:1.15rem}
+.case-row{display:flex;gap:.7rem;margin-bottom:.58rem;align-items:flex-start}.ctag{font-size:9.5px;padding:3px 9px;border-radius:20px;font-weight:500;white-space:nowrap;flex-shrink:0;margin-top:2px}.cp{background:rgba(248,113,113,.15);color:var(--red)}.ca{background:rgba(79,142,247,.15);color:var(--accent)}.cr{background:rgba(74,222,128,.15);color:var(--green)}.ctext{font-size:11.5px;color:var(--sub);line-height:1.62}.featured .ctext{font-size:12.3px;line-height:1.66}
+
+.timeline{position:relative;padding-left:2.3rem}.timeline::before{content:'';position:absolute;left:8px;top:10px;bottom:10px;width:1px;background:linear-gradient(to bottom,var(--accent),rgba(79,142,247,.12))}
+.tl-item{position:relative;margin-bottom:.9rem;opacity:0;transform:translateX(-10px);border:1px solid var(--border);border-radius:12px;background:var(--card);overflow:hidden}
+.tl-item.vis{opacity:1;transform:translateX(0);transition:all .42s}
+.tl-dot{position:absolute;left:-2.3rem;top:19px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);transition:.3s;z-index:2}
+.tl-item[open] .tl-dot{background:var(--accent);box-shadow:0 0 14px rgba(79,142,247,.45)}
+.tl-summary{list-style:none;cursor:pointer;padding:1rem 1.15rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.3rem 1rem;align-items:center;position:relative}
+.tl-summary::-webkit-details-marker{display:none}.tl-summary::marker{display:none}
+.tl-main{min-width:0}.tl-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap}.tl-co{font-size:13.5px;font-weight:600}.tl-period{font-size:10.5px;color:var(--sub);font-style:italic}.tl-role{font-size:11.5px;color:var(--accent);font-weight:500;margin-top:3px}.tl-note{font-size:10.5px;color:var(--sub);font-style:italic;margin-top:5px;line-height:1.5}
+.tl-toggle{width:28px;height:28px;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:16px;transition:.2s}
+.tl-toggle::before{content:'+'}.tl-item[open] .tl-toggle::before{content:'−'}.tl-item[open] .tl-toggle{color:var(--accent);border-color:rgba(79,142,247,.35);background:rgba(79,142,247,.08)}
+.tl-body{border-top:1px solid var(--border);padding:.85rem 1.15rem 1rem;background:rgba(255,255,255,.012)}.tl-body ul{list-style:none}.tl-body li{font-size:11.7px;color:var(--sub);padding:3px 0 3px 15px;position:relative;line-height:1.55}.tl-body li::before{content:'›';position:absolute;left:0;color:var(--accent);font-size:14px}
+
+.skills-list{border-top:1px solid var(--border)}
+.skill-row{display:grid;grid-template-columns:150px 1fr;gap:1.2rem;align-items:start;padding:1rem 0;border-bottom:1px solid var(--border)}
+.skill-card-title{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding-top:5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:10.5px;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,.045);color:var(--sub);border:1px solid var(--border);transition:all .2s;cursor:default}.tag:hover{background:rgba(79,142,247,.12);color:var(--accent);border-color:rgba(79,142,247,.25)}.tag.blue{background:rgba(79,142,247,.1);color:var(--accent);border-color:rgba(79,142,247,.22)}
+.nda-note{margin-top:1.2rem;font-size:10.8px;color:var(--sub);line-height:1.65;font-style:italic;max-width:780px}
+
+footer{border-top:1px solid var(--border);padding:2.25rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-name{font-size:14px;font-weight:600;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.footer-contacts{display:flex;gap:1.7rem;flex-wrap:wrap}.footer-contacts a,.footer-contacts span{font-size:11.5px;color:var(--sub);text-decoration:none}.footer-contacts a:hover{color:var(--accent)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+@media (max-width:900px){.cases-grid.count-4 .case-card:not(.featured),.case-card{grid-column:span 3}}
+@media (max-width:720px){
+  nav{padding:.6rem 1rem;gap:.65rem;flex-wrap:wrap}.nav-links{gap:1rem;order:3;width:100%;justify-content:flex-start}.nav-actions{margin-left:auto;flex-wrap:wrap}.btn-nav{display:none}
+  .hero{min-height:auto;padding:2.7rem 1.25rem 2.3rem}.hero-name{font-size:clamp(42px,13vw,62px);letter-spacing:-1.5px}.hero-title{font-size:16px}.hero-desc{font-size:13px}.hero-cta{flex-direction:column;align-items:stretch}.btn-primary,.btn-ghost{text-align:center}
+  .stats-band{grid-template-columns:1fr 1fr}.stat-item{padding:1.15rem .75rem;border-bottom:1px solid var(--border)}.stat-item+.stat-item::before{display:none}.stat-num{font-size:29px}
+  .section{padding:2.7rem 1.25rem}.section-title{font-size:20px}
+  .cases-grid{grid-template-columns:1fr}.case-card,.case-card.featured,.cases-grid.count-4 .case-card:not(.featured){grid-column:1}.case-card.featured{padding:1.55rem}.case-card.featured .case-title{font-size:16px}.featured .ctext{font-size:11.5px}
+  .timeline{padding-left:1.75rem}.tl-dot{left:-1.75rem}.tl-summary{grid-template-columns:minmax(0,1fr) auto}.tl-head{flex-direction:column;gap:.1rem}
+  .skill-row{grid-template-columns:1fr;gap:.55rem}
+  footer{flex-direction:column;align-items:flex-start;gap:.75rem;padding:2rem 1.25rem}.footer-contacts{flex-direction:column;gap:.4rem}
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:linear-gradient(180deg,#0a0c11 0%,#0f131c 100%);
-  color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.55;
-}
-.wrap{max-width:1120px;margin:0 auto;padding:44px 28px 80px}
-.hero{padding:34px 0 28px;border-bottom:1px solid var(--line)}
-.eyebrow{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:700}
-h1{font-size:56px;line-height:1.02;margin:10px 0 10px;letter-spacing:-.035em}
-.lead{font-size:25px;line-height:1.35;max-width:900px;margin:12px 0 18px;font-weight:650}
-.intro{font-size:17px;color:#c7cfda;max-width:920px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0 0}
-.stat{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:16px;padding:18px}
-.stat b{display:block;font-size:26px}
-.stat span{font-size:13px;color:var(--muted)}
-section{margin-top:40px}
-h2{font-size:26px;margin:0 0 18px}
-h3{font-size:20px;margin:0 0 8px}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
-.card p{margin:8px 0;color:#d6dce5}
-.label{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:700;margin-top:12px}
-.timeline{display:grid;gap:14px}
-.job{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
-.jobhead{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
-.role{font-weight:700;font-size:18px}
-.date{color:var(--muted);white-space:nowrap}
-ul{margin:10px 0 0 20px;padding:0}
-li{margin:5px 0;color:#d6dce5}
-.skills{display:grid;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
-.skills div{color:#d6dce5}.skills b{color:#fff}
-.note{margin-top:30px;padding:18px 20px;border-left:3px solid var(--accent);background:rgba(138,164,255,.06);color:#c8d0dc}
-@media(max-width:760px){
-  .wrap{padding:28px 18px 56px}h1{font-size:42px}.lead{font-size:21px}
-  .stats,.cards{grid-template-columns:1fr 1fr}.jobhead{display:block}.date{margin-top:3px}
-}
-@media(max-width:520px){.stats,.cards{grid-template-columns:1fr}}
 @media print{
-  body{background:#fff;color:#111}.wrap{max-width:none;padding:0}
-  .card,.job,.skills,.stat{background:#fff;border-color:#ddd;break-inside:avoid}
-  .intro,.card p,li,.skills div,.note{color:#222}.date,.stat span{color:#555}
-  .hero{border-color:#ddd}.note{background:#fff;border-color:#555}
+  *{animation:none!important;transition:none!important}body{background:white!important;color:#1A1A1A!important}nav{display:none!important}
+  .hero{min-height:auto!important;padding:1.4rem 0 1rem!important}.hero::before{display:none!important}.hero-label{color:#1A56DB!important;opacity:1!important;animation:none!important;margin-bottom:.5rem!important}
+  .hero-name{font-size:38px!important;letter-spacing:-1px!important;opacity:1!important;animation:none!important;background:none!important;-webkit-text-fill-color:#1A1A1A!important;color:#1A1A1A!important;margin-bottom:.5rem!important}
+  .hero-title{opacity:1!important;animation:none!important;color:#555!important;font-size:15px!important;margin-bottom:.8rem!important}.hero-title b{color:#1A56DB!important}.hero-desc{opacity:1!important;animation:none!important;color:#333!important;margin-bottom:0!important}.hero-cta{display:none!important}.metric{color:#111!important}
+  .stats-band{background:white!important;border-color:#ddd!important}.stat-item{padding:.8rem!important}.stat-num{background:none!important;-webkit-text-fill-color:#1A56DB!important;color:#1A56DB!important;font-size:26px!important}.stat-lbl{color:#555!important}
+  .section{padding:1.3rem 0!important;max-width:100%!important}.section-title{color:#1A1A1A!important;font-size:19px!important}.section-num{color:#1A56DB!important}.section-line{background:#ddd!important}
+  .cases-grid{display:grid!important;grid-template-columns:1fr 1fr!important}.case-card,.case-card.featured,.cases-grid.count-4 .case-card:not(.featured){grid-column:auto!important;opacity:1!important;transform:none!important;background:#F7F9FC!important;border-color:#ddd!important;box-shadow:none!important;page-break-inside:avoid;padding:.9rem!important}.case-card.featured{grid-column:1/-1!important}.case-title,.case-card.featured .case-title{color:#1A1A1A!important;font-size:14px!important}.ctext{color:#444!important}.cp{background:#FAECE7!important;color:#993C1D!important}.ca{background:#E6F1FB!important;color:#0C447C!important}.cr{background:#EAF3DE!important;color:#3B6D11!important}
+  .timeline{padding-left:1.7rem!important}.tl-item{opacity:1!important;transform:none!important;background:white!important;border-color:#ddd!important;page-break-inside:avoid}.tl-dot{background:white!important;border-color:#1A56DB!important;left:-1.7rem!important}.timeline::before{background:#1A56DB!important}.tl-summary{padding:.7rem .9rem!important}.tl-toggle{display:none!important}.tl-co{color:#1A1A1A!important}.tl-period,.tl-note,.nda-note{color:#777!important}.tl-role{color:#1A56DB!important}.tl-body,details:not([open])>.tl-body{display:block!important;background:#F7F9FC!important;border-color:#ddd!important;padding:.7rem .9rem!important}.tl-body li{color:#444!important}.tl-body li::before{color:#1A56DB!important}
+  .skills-list{border-color:#ddd!important}.skill-row{border-color:#ddd!important}.skill-card-title{color:#1A56DB!important}.tag{background:white!important;color:#444!important;border-color:#ccc!important}.tag.blue{background:#E6F1FB!important;color:#0C447C!important;border-color:#B5D4F4!important}
+  footer{border-color:#ddd!important;padding:1.3rem 0!important}.footer-name{background:none!important;-webkit-text-fill-color:#1A56DB!important;color:#1A56DB!important}.footer-contacts a,.footer-contacts span{color:#555!important}
 }
-</style></head><body>
-<div class='wrap'>
-<header class='hero'>
-<div class='eyebrow'>Head of Creative · Creative Operations Lead</div>
-<h1>Игорь Громов</h1>
-<div class='lead'>Превращаю растущий хаос в управляемое производство, объединяя людей, процессы и AI.</div>
-<div class='intro'>7+ лет в performance-маркетинге, 3+ года в руководстве креативным отделом. Пришёл в компанию на этапе её роста и выстроил систему производства: оценку сложности и KPI, сбор и анализ статистики, автоматизацию процессов и внедрение ИИ. Руководил командой 10–12 дизайнеров с объёмом 300–500 креативов в месяц в iGaming, betting, white-label и других направлениях.</div>
-<div class='stats'><div class='stat'><b>7+</b><span>лет в индустрии</span></div><div class='stat'><b>12</b><span>человек в команде</span></div><div class='stat'><b>300–500</b><span>креативов в месяц</span></div><div class='stat'><b>3+ года</b><span>в руководстве</span></div></div>
-</header>
-<section><h2>Ключевые кейсы</h2><div class='cards'><div class='card'><h3>Система управления производством</h3><div class='label'>Проблема</div><p>Видео, статика и интерактивные креативы сильно различались по трудоёмкости, поэтому простое количество закрытых задач не отражало реальную загрузку дизайнеров.</p><div class='label'>Действие</div><p>Совместно с креативной командой разработал систему оценки сложности для видео, статики и интерактивных креативов с пятью уровнями трудоёмкости и нормативами времени. Совместно с креативщиками и разработчиками внедрил специальную форму сбора статистики, данные из которой используются для оценки загрузки, аналитики и KPI команды.</p><div class='label'>Результат</div><p>Система использовалась на потоке более 1 100 уникальных задач и около 2 000 единиц контента, создав единую основу для оценки сложности, объёма работ и загрузки команды.</p></div><div class='card'><h3>Автоматизация процессов</h3><div class='label'>Проблема</div><p>При большом объёме производства часть времени уходила на ручной сбор данных, техническую проверку сдач и исправление повторяющихся ошибок.</p><div class='label'>Действие</div><p>Автоматизировал часть производственных процессов и внедрял ИИ в повседневную работу команды. Разработал бота, который читает требования непосредственно из задачи в таск-трекере — размеры, количество версий, типы материалов и другие параметры — и сравнивает их с фактически загруженными файлами. Бот проверяет количество и тип файлов, размеры, названия, версии, структуру папок и другие формальные требования.</p><div class='label'>Результат</div><p>Часть сбора данных и технического контроля переведена из ручной работы в автоматические процессы, что сократило объём рутины для команды и руководителя.</p></div><div class='card'><h3>Система качества креативов</h3><div class='label'>Проблема</div><p>Качество сильно зависело от конкретного дизайнера, а единых ориентиров внутри команды не было.</p><div class='label'>Действие</div><p>Сформировал стандарты по визуалу, композиции, динамике и звуку. Регулярно разбирал работы с дизайнерами и развивал насмотренность команды. На одном из этапов мы намеренно значительно подняли требования к визуальному качеству. Позже скорректировали подход и нашли более практичный баланс между качеством и скоростью производства.</p><div class='label'>Результат</div><p>У команды сформировалось единое понимание визуальной планки и того, какой уровень проработки оправдан для разных задач.</p></div><div class='card'><h3>Развитие команды</h3><div class='label'>Проблема</div><p>Рост объёма задач требовал расширения команды без потери управляемости и качества.</p><div class='label'>Действие</div><p>Лично участвовал в найме 7–8 дизайнеров, выстроил онбординг, регулярную обратную связь, грейдирование и развитие сотрудников.</p><div class='label'>Результат</div><p>Под непосредственным руководством — до 12 специалистов. Несколько дизайнеров выросли с junior до middle-уровня.</p></div></div></section>
-<section><h2>Опыт работы</h2><div class='timeline'><div class='job'>
-      <div class='jobhead'><div><div class='role'>Performance Marketing Agency (NDA)</div><div>Team Lead, Creative Department</div></div><div class='date'>октябрь 2023 — ноябрь 2026</div></div>
-      <p>Пришёл в компанию motion-дизайнером и через 7 месяцев стал Team Lead.</p><ul><li>Управление командой 10–12 человек: motion, static и playable-дизайнеры</li><li>Выпуск 300–500 креативов в месяц: UGC, реклама, промо, анимация, 3D и ИИ-видео</li><li>Планирование и распределение загрузки</li><li>Оценка трудоёмкости и контроль сроков</li><li>KPI, система мотивации и производственная аналитика</li><li>Найм, онбординг, обратная связь, грейдирование и развитие сотрудников</li><li>Контроль качества и развитие визуального уровня команды</li><li>Работа с аналитиками, разработчиками, баингом, креативщиками, подрядчиками и зарубежными UGC-креаторами</li><li>Внедрение ИИ и автоматизации в рабочие процессы</li></ul></div><div class='job'>
-      <div class='jobhead'><div><div class='role'>Performance Marketing Agency (NDA)</div><div>Motion Designer</div></div><div class='date'>апрель 2023 — октябрь 2023</div></div>
-      <ul><li>Рекламные видеокреативы для performance-направлений</li><li>Один из первых в команде начал системно использовать инструменты генеративного видео</li><li>Помощь коллегам с визуалом, анимацией и новыми инструментами</li></ul></div><div class='job'>
-      <div class='jobhead'><div><div class='role'>Корпорация Гуру</div><div>Motion Designer · фриланс</div></div><div class='date'>апрель 2021 — март 2023</div></div>
-      <ul><li>Видеокреативы для рекламы мобильных игр и приложений</li><li>Работа с разными визуальными стилями и брендами</li></ul></div><div class='job'>
-      <div class='jobhead'><div><div class='role'>WakeApp</div><div>Motion Designer</div></div><div class='date'>сентябрь 2019 — декабрь 2021</div></div>
-      <ul><li>Креативы для рекламы мобильных приложений</li><li>Разработка сценариев и визуальных концепций</li></ul></div><div class='job'>
-      <div class='jobhead'><div><div class='role'>AdSide Media</div><div>Creative Producer / Motion Designer</div></div><div class='date'>декабрь 2021 — февраль 2022</div></div>
-      <ul><li>Анализ рекламных креативов и поиск идей</li><li>Постановка задач и сопровождение производства</li></ul></div><div class='job'>
-      <div class='jobhead'><div><div class='role'>UPG Consulting</div><div>Дизайнер-верстальщик</div></div><div class='date'>июнь 2018 — сентябрь 2019</div></div>
-      <ul><li>Ключевые визуалы, вёрстка и допечатная подготовка</li></ul></div></div></section>
-<section><h2>Навыки</h2><div class='skills'><div><b>Руководство:</b> найм · онбординг · развитие · грейдирование · мотивация · делегирование</div><div><b>Производство:</b> загрузка · приоритеты · сроки · оценка сложности · подрядчики</div><div><b>Аналитика:</b> KPI · Power BI · таск-трекеры · Google Sheets</div><div><b>Креатив:</b> motion · UGC · playable · 3D · контроль качества</div><div><b>ИИ и автоматизация:</b> генерация изображений и видео · автоматизация проверок и рабочих процессов</div></div></section>
-<div class='note'>Часть рабочих материалов не могу публиковать открыто из-за NDA. На собеседовании могу показать обезличенные примеры и подробнее рассказать о проектах, процессах и принятых решениях.</div>
-</div></body></html>
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-name">Игорь Громов</div>
+  <div class="nav-links"><a href="#cases">Кейсы</a><a href="#exp">Опыт</a><a href="#skills">Навыки</a></div>
+  <div class="nav-actions"><div class="lang-seg"><a class="active" href="head-of-creative">RU</a><a href="en/head-of-creative">EN</a></div><a class="btn-nav" href="#contact">Контакты</a><button class="btn-p" onclick="window.print()">Скачать PDF</button></div>
+</nav>
+<section class="hero">
+  <div class="hero-label">Head of Creative · Creative Operations Lead</div>
+  <h1 class="hero-name">Игорь<br>Громов</h1>
+  <div class="hero-title">Превращаю растущий хаос в управляемое производство, <b>объединяя людей, процессы и AI.</b></div>
+  <p class="hero-desc"><strong class="metric">7+</strong> лет в performance-маркетинге, <strong class="metric">3+</strong> года в руководстве креативным отделом. Пришёл в компанию на этапе её роста и выстроил систему производства: оценку сложности и KPI, сбор и анализ статистики, автоматизацию процессов и внедрение ИИ. Руководил командой <strong class="metric">10–<strong class="metric">12</strong></strong> дизайнеров с объёмом <strong class="metric">300–500</strong> креативов в месяц в iGaming, betting, white-label и других направлениях.</p>
+  <div class="hero-cta">
+    <button class="btn-primary" onclick="document.getElementById('cases').scrollIntoView({behavior:'smooth'})">Смотреть кейсы</button>
+    <button class="btn-ghost" onclick="document.getElementById('exp').scrollIntoView({behavior:'smooth'})">Опыт работы</button>
+  </div>
+</section>
+<div class="stats-band"><div class="stat-item"><div class="stat-num" data-t="7" data-s="+">7+</div><div class="stat-lbl">лет в индустрии</div></div><div class="stat-item"><div class="stat-num" data-t="12" data-s="">12</div><div class="stat-lbl">человек в команде</div></div><div class="stat-item"><div class="stat-num" data-t="500" data-s="">500</div><div class="stat-lbl">крео в месяц</div></div><div class="stat-item"><div class="stat-num" data-t="3" data-s="+">3+</div><div class="stat-lbl">года в руководстве</div></div></div>
+<section class="section" id="cases">
+  <div class="section-header"><span class="section-num">01</span><h2 class="section-title">Кейсы</h2><div class="section-line"></div></div>
+  <div class="cases-grid count-4"><div class="case-card featured"><div class="case-title">Система управления производством</div>
+      <div class="case-row"><span class="ctag cp">Проблема</span><span class="ctext">Видео, статика и интерактивные креативы сильно различались по трудоёмкости, поэтому количество закрытых задач не отражало реальную загрузку.</span></div>
+      <div class="case-row"><span class="ctag ca">Действие</span><span class="ctext">Совместно с креативной командой разработал систему оценки сложности для видео, статики и playable-креативов с пятью уровнями трудоёмкости и нормативами времени. Совместно с креативщиками и разработчиками внедрил форму сбора статистики и автоматизировал передачу данных в аналитику для оценки загрузки и KPI.</span></div>
+      <div class="case-row"><span class="ctag cr">Результат</span><span class="ctext">Система использовалась на потоке более <strong class="metric">1 100</strong> уникальных задач и около <strong class="metric">2 000</strong> единиц контента.</span></div>
+    </div><div class="case-card"><div class="case-title">Автоматизация процессов</div>
+      <div class="case-row"><span class="ctag cp">Проблема</span><span class="ctext">При большом объёме производства много времени уходило на повторяющиеся технические проверки и ручную рутину.</span></div>
+      <div class="case-row"><span class="ctag ca">Действие</span><span class="ctext">Разработал бота, который читает требования из задачи в таск-трекере и сравнивает их с фактически загруженными файлами: количество, типы, размеры, названия, версии, структуру папок и другие формальные требования.</span></div>
+      <div class="case-row"><span class="ctag cr">Результат</span><span class="ctext">Часть рутинного технического контроля переведена в автоматическую проверку, чтобы ручная проверка была сосредоточена на содержании и качестве.</span></div>
+    </div><div class="case-card"><div class="case-title">Система качества креативов</div>
+      <div class="case-row"><span class="ctag cp">Проблема</span><span class="ctext">Качество сильно зависело от конкретного дизайнера, а единых ориентиров внутри команды не было.</span></div>
+      <div class="case-row"><span class="ctag ca">Действие</span><span class="ctext">Сформировал стандарты по визуалу, композиции, динамике и звуку. Регулярно разбирал работы с дизайнерами и развивал насмотренность команды. Позже скорректировал избыточно высокий уровень проработки в сторону более практичного баланса качества и скорости.</span></div>
+      <div class="case-row"><span class="ctag cr">Результат</span><span class="ctext">У команды сформировалось единое понимание визуальной планки и подходящей глубины проработки под разные задачи.</span></div>
+    </div><div class="case-card"><div class="case-title">Развитие команды</div>
+      <div class="case-row"><span class="ctag cp">Проблема</span><span class="ctext">Рост объёма задач требовал расширения команды без потери управляемости и качества.</span></div>
+      <div class="case-row"><span class="ctag ca">Действие</span><span class="ctext">Лично участвовал в найме <strong class="metric">7–8</strong> дизайнеров, выстроил онбординг, регулярную обратную связь, грейдирование и развитие сотрудников.</span></div>
+      <div class="case-row"><span class="ctag cr">Результат</span><span class="ctext">Под непосредственным руководством — до <strong class="metric">12</strong> специалистов; несколько дизайнеров выросли с junior до middle-уровня.</span></div>
+    </div></div>
+</section>
+<section class="section" id="exp">
+  <div class="section-header"><span class="section-num">02</span><h2 class="section-title">Опыт</h2><div class="section-line"></div></div>
+  <div class="timeline"><details class="tl-item" open>
+      <div class="tl-dot"></div>
+      <summary class="tl-summary">
+        <div class="tl-main">
+          <div class="tl-head"><span class="tl-co">Performance Marketing Agency (NDA)</span><span class="tl-period">окт 2023 — ноя 2026</span></div>
+          <div class="tl-role">Team Lead, Creative Department</div><div class="tl-note">Пришёл в компанию motion-дизайнером и через <strong class="metric">7 месяцев</strong> стал Team Lead. Компания выросла до <strong class="metric">100+</strong> человек, дизайн-отдел — до <strong class="metric">21</strong>.</div>
+        </div>
+        <span class="tl-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="tl-body"><ul><li>Управление командой <strong class="metric">10–<strong class="metric">12</strong></strong> человек: motion, static и playable-дизайнеры</li><li>Выпуск <strong class="metric">300–500</strong> креативов в месяц: UGC, реклама, промо, анимация, 3D и ИИ-видео</li><li>Планирование и распределение загрузки, оценка трудоёмкости и контроль сроков</li><li>KPI, система мотивации и производственная аналитика</li><li>Найм, онбординг, обратная связь, грейдирование и развитие сотрудников</li><li>Контроль качества и развитие визуального уровня команды</li><li>Работа с аналитиками, разработчиками, баингом, креативщиками, подрядчиками и зарубежными UGC-креаторами</li><li>Внедрение ИИ и автоматизации в рабочие процессы</li></ul></div>
+    </details><details class="tl-item">
+      <div class="tl-dot"></div>
+      <summary class="tl-summary">
+        <div class="tl-main">
+          <div class="tl-head"><span class="tl-co">Performance Marketing Agency (NDA)</span><span class="tl-period">апр — окт 2023</span></div>
+          <div class="tl-role">Motion Designer</div>
+        </div>
+        <span class="tl-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="tl-body"><ul><li>Рекламные видеокреативы для performance-направлений</li><li>Один из первых в команде начал системно использовать инструменты генеративного видео</li><li>Помощь коллегам с визуалом, анимацией и новыми инструментами</li></ul></div>
+    </details><details class="tl-item">
+      <div class="tl-dot"></div>
+      <summary class="tl-summary">
+        <div class="tl-main">
+          <div class="tl-head"><span class="tl-co">Корпорация Гуру</span><span class="tl-period">апр 2021 — мар 2023</span></div>
+          <div class="tl-role">Motion Designer · фриланс</div>
+        </div>
+        <span class="tl-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="tl-body"><ul><li>Видеокреативы для рекламы мобильных игр и приложений</li><li>Работа с разными визуальными стилями и брендами</li></ul></div>
+    </details><details class="tl-item">
+      <div class="tl-dot"></div>
+      <summary class="tl-summary">
+        <div class="tl-main">
+          <div class="tl-head"><span class="tl-co">WakeApp</span><span class="tl-period">сен 2019 — дек 2021</span></div>
+          <div class="tl-role">Motion Designer</div>
+        </div>
+        <span class="tl-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="tl-body"><ul><li>Креативы для рекламы мобильных приложений</li><li>Разработка сценариев и визуальных концепций</li></ul></div>
+    </details><details class="tl-item">
+      <div class="tl-dot"></div>
+      <summary class="tl-summary">
+        <div class="tl-main">
+          <div class="tl-head"><span class="tl-co">AdSide Media</span><span class="tl-period">дек 2021 — фев 2022</span></div>
+          <div class="tl-role">Creative Producer / Motion Designer</div>
+        </div>
+        <span class="tl-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="tl-body"><ul><li>Анализ рекламных креативов и поиск идей</li><li>Постановка задач и сопровождение производства</li></ul></div>
+    </details><details class="tl-item">
+      <div class="tl-dot"></div>
+      <summary class="tl-summary">
+        <div class="tl-main">
+          <div class="tl-head"><span class="tl-co">UPG Consulting</span><span class="tl-period">июн 2018 — сен 2019</span></div>
+          <div class="tl-role">Дизайнер-верстальщик</div>
+        </div>
+        <span class="tl-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="tl-body"><ul><li>Ключевые визуалы, вёрстка и допечатная подготовка</li></ul></div>
+    </details></div>
+</section>
+<section class="section" id="skills">
+  <div class="section-header"><span class="section-num">03</span><h2 class="section-title">Навыки</h2><div class="section-line"></div></div>
+  <div class="skills-list"><div class="skill-row"><div class="skill-card-title">Управление</div><div class="tags"><span class="tag">Найм</span><span class="tag">Онбординг</span><span class="tag">Развитие</span><span class="tag">Грейдирование</span><span class="tag">Мотивация</span><span class="tag">Делегирование</span></div></div><div class="skill-row"><div class="skill-card-title">Производство</div><div class="tags"><span class="tag">Загрузка</span><span class="tag">Приоритеты</span><span class="tag">Сроки</span><span class="tag">Оценка сложности</span><span class="tag">Подрядчики</span></div></div><div class="skill-row"><div class="skill-card-title">Аналитика</div><div class="tags"><span class="tag">KPI</span><span class="tag">Power BI</span><span class="tag">Таск-трекер</span><span class="tag">Google Sheets</span></div></div><div class="skill-row"><div class="skill-card-title">Креатив</div><div class="tags"><span class="tag">Motion</span><span class="tag">UGC</span><span class="tag">Playable</span><span class="tag">3D</span><span class="tag">Контроль качества</span></div></div><div class="skill-row"><div class="skill-card-title">ИИ и автоматизация</div><div class="tags"><span class="tag blue">Генерация изображений</span><span class="tag blue">Генерация видео</span><span class="tag blue">Автоматизация проверок</span><span class="tag blue">Автоматизация процессов</span></div></div></div>
+</section>
+<footer id="contact"><div class="footer-name">Игорь Громов</div><div class="footer-contacts"><span>+7 (903) 804-09-32</span><a href="mailto:igorgromovwork@yandex.ru">igorgromovwork@yandex.ru</a><a href="https://t.me/igoryangromov">@igoryangromov</a></div></footer>
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(!e.isIntersecting) return;
+    const el = e.target;
+    if(el.dataset.t){
+      const t = parseInt(el.dataset.t), s = el.dataset.s||'', d = 1200, st = performance.now();
+      const upd = now => { const p = Math.min((now-st)/d,1), ease = 1-Math.pow(1-p,3); el.textContent = Math.round(ease*t)+s; if(p<1) requestAnimationFrame(upd); };
+      requestAnimationFrame(upd);
+    }
+    el.classList.add('vis');
+    io.unobserve(el);
+  });
+},{threshold:0.15});
+document.querySelectorAll('[data-t]').forEach(el=>io.observe(el));
+document.querySelectorAll('.case-card,.tl-item').forEach((el,i)=>{el.style.transitionDelay=i*60+'ms';io.observe(el);});
+</script>
+</body>
+</html>
